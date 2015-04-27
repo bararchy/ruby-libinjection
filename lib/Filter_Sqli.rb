@@ -20,7 +20,6 @@ class FilterSqli
       length = data.bytesize
       return 0 if length <= 0
       sfilter = LibC::malloc(1024)
-      puts sfilter
       LibInject::libinjection_sqli_init(sfilter, data, length, 0)
       LibInject::libinjection_is_sqli(sfilter)
     rescue => e
