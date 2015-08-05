@@ -7,5 +7,11 @@ Simple Usage is:
 
 ```
 cd test
-ruby test.rb 'wululu'
+
+ruby test.rb "wululu"
+No SQLi Found
+
+ruby test.rb "wululu 'OR 'a'='a'"
+SQLi Found!
+
 ```
